@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Spot - Best Burgers in Kinniya</title>
     <link rel="stylesheet" type="text/css" href="burger shot/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">Kinniya<span>Burger</span></div>
+            <div class="logo"><img src="images/logo.png" alt="Kinniya Burger Logo"
+                    style="height: 40px; vertical-align: middle; margin-right: 10px;">Kinniya<span>Burger</span></div>
             <div class="mobile-menu">☰</div>
             <nav>
                 <ul>
@@ -79,9 +82,14 @@
             <h2 class="section-title">About Us</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Welcome to Burger Spot, your go-to destination for delicious burgers in Kinniya. Founded by f mohamed afrath, we're passionate about serving high-quality, flavorful burgers made with the freshest ingredients.</p>
-                    <p>Our mission is simple: to create the best burger experience for our customers. From our perfectly grilled patties to our freshly baked buns and house-made sauces, every element is crafted with care.</p>
-                    <p>Whether you're craving a classic beef burger, a juicy chicken burger, or a tasty vegetarian option, we've got something for everyone. Come visit us and taste the difference!</p>
+                    <p>Welcome to Burger Spot, your go-to destination for delicious burgers in Kinniya. Founded by f
+                        mohamed afrath, we're passionate about serving high-quality, flavorful burgers made with the
+                        freshest ingredients.</p>
+                    <p>Our mission is simple: to create the best burger experience for our customers. From our perfectly
+                        grilled patties to our freshly baked buns and house-made sauces, every element is crafted with
+                        care.</p>
+                    <p>Whether you're craving a classic beef burger, a juicy chicken burger, or a tasty vegetarian
+                        option, we've got something for everyone. Come visit us and taste the difference!</p>
                     <div class="contact-details" style="margin-top: 1.5rem;">
                         <p><strong>Owner:</strong> F.MOHAMED AFRATH</p>
                         <p><strong>Contact:</strong> 0753515952</p>
@@ -89,7 +97,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="afrath.jpg"Burger Spot Interior">
+                    <img src="afrath.jpg" Burger Spot Interior">
                 </div>
             </div>
         </div>
@@ -173,25 +181,25 @@
 
     <script>
         // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('nav ul').classList.toggle('show');
         });
 
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu after clicking a link
                     document.querySelector('nav ul').classList.remove('show');
                 }
@@ -199,11 +207,12 @@
         });
 
         // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             this.reset();
         });
     </script>
 </body>
+
 </html>
